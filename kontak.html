@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - Jefri Ompusunggu Blog Singkat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="main-header">Jefri Ompusunggu Blog Singkat</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Beranda</a> | <a href="tentang.html">Tentang</a> |
+      <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <main>
+      <h2 class="animated-text">Kontak Jefri Ompusunggu</h2>
+
+      <address>
+        <p>
+          Untuk informasi lebih lanjut, silakan hubungi saya melalui kontak yang
+          tersedia di bawah ini.
+        </p>
+        <ul class="contact-list">
+          <li>
+            <b>Email</b> :
+            <a href="mailto:jefriiarioss0144@gmail.com"
+              >jefriiarioss0144@gmail.com</a
+            >
+          </li>
+          <li><b>Telepon</b> : +62 85280060554</li>
+          <li>
+            <b>Facebook</b> :
+            <a
+              href="https://facebook.com/jefriompusunggu"
+              target="_blank"
+              rel="noopener noreferrer"
+              >facebook.com/jefriompusunggu</a
+            >
+          </li>
+          <li>
+            <b>Instagram</b> :
+            <a
+              href="https://instagram.com/jefriompusunggu"
+              target="_blank"
+              rel="noopener noreferrer"
+              >instagram.com/jefriompusunggu</a
+            >
+          </li>
+        </ul>
+      </address>
+
+      <div class="message-section">
+        <form action="#" method="GET">
+          <h3>Kirim gw sebuah pesan!!!</h3>
+
+          <div class="form-group">
+            <label for="nama">Nama :</label>
+            <input
+              type="text"
+              id="nama"
+              name="Nama"
+              value="Jefri Ganteng"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="no_hp">No. HP :</label>
+            <div class="phone-input">
+              <select id="country_code" name="Kode_Negara">
+                <option value="+62 Indonesia">+62 Indonesia</option>
+                <option value="+1 USA">+1 USA</option>
+                <option value="+44 UK">+44 UK</option>
+              </select>
+              <input
+                type="tel"
+                id="no_hp"
+                name="No_HP"
+                value="nomer lu"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="pesan">Pesan :</label>
+            <textarea id="pesan" name="Pesan" rows="5" required>
+Halo salam kenal!</textarea
+            >
+          </div>
+
+          <input
+            type="submit"
+            value="Kirim"
+            class="submit-button"
+            onclick="return refreshAndValidate(event)"
+          />
+        </form>
+      </div>
+    </main>
+
+    <footer>© 2025 Jefri Ompusunggu</footer>
+    <script src="script.js"></script>
+
+    <script>
+      function refreshAndValidate(event) {
+        const form = event.target.closest("form");
+
+        // 1. Memeriksa validasi HTML5 (atribut 'required')
+        if (form.checkValidity()) {
+          // 2. Menghentikan aksi default form (menghentikan mailto:)
+          event.preventDefault();
+
+          // 3. Me-refresh halaman
+          window.location.reload();
+          return true;
+        } else {
+          // Jika validasi gagal, biarkan browser menampilkan pesan error
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

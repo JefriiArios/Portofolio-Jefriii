@@ -1,0 +1,222 @@
+/* style.css - Ditingkatkan untuk Desain Responsif (Tampilan Android/Mobile) */
+
+/* === Base Styles: GRADASI BIRU-PUTIH-HITAM === */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  /* Gradasi Keren: Dari putih ke biru muda, ke biru tua, berakhir hitam */
+  background: linear-gradient(
+    to right,
+    #f8f8ff,
+    #add8e6,
+    #4682b4,
+    #1e1e30,
+    #000000
+  );
+  color: #000000;
+}
+
+/* === Header dan Navigasi === */
+header {
+  background-color: #191970; /* Biru Tua */
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ... (Bagian .profile-header-pic tidak berubah) ... */
+.profile-header-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #00bcd4; /* Biru Muda Aksen */
+}
+nav {
+  background-color: #2c3e50; /* Biru Kehitaman */
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+nav a {
+  color: #ecf0f1; /* Putih Cerah */
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+nav a:hover {
+  background-color: #34495e; /* Hover Biru Lebih Gelap */
+}
+
+/* === Main Content Container === */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95); /* Putih semi-transparan */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+.main-tentang {
+  max-width: 1200px;
+}
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+/* === Headings dan Text === */
+h2.animated-text {
+  color: #007bff; /* Biru Cerah */
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+h3 {
+  color: #191970; /* Biru Tua */
+  margin-top: 25px;
+  border-left: 5px solid #00bcd4; /* Biru Muda Aksen */
+  padding-left: 10px;
+}
+/* ... (Aturan CSS lainnya di bagian tengah tidak berubah) ... */
+
+/* === Kontak.html Styles === */
+.contact-list li {
+  list-style-type: none;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 5px solid #007bff; /* Biru Cerah */
+  background-color: #e6f7ff; /* Biru Sangat Muda */
+  border-radius: 4px;
+}
+.contact-list a {
+  color: #191970; /* Biru Tua */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* === STYLING FORM BARU (message-section) === */
+.message-section {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: #f8f9fa; /* Latar Belakang Putih Kebiruan */
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-section h3 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+  border-left: none;
+  padding-left: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.phone-input {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-input select {
+  width: 40%; /* Menyesuaikan lebar select */
+  max-width: 150px;
+}
+
+.phone-input input[type="tel"] {
+  flex-grow: 1;
+  width: auto;
+}
+
+.submit-button {
+  background-color: #191970; /* Biru Tua untuk tombol */
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  display: block;
+  margin: 20px auto 0 auto;
+  transition: background-color 0.3s ease;
+  width: auto;
+}
+
+.submit-button:hover {
+  background-color: #007bff; /* Biru Cerah saat hover */
+}
+
+/* === Footer === */
+footer {
+  background-color: #1a1a1a; /* Hitam keabu-abuan */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* ======================================= */
+/* === MEDIA QUERIES (RESPONSIVE DESIGN) === */
+/* ======================================= */
+
+@media (max-width: 600px) {
+  /* ... (Semua aturan media query lainnya tidak berubah) ... */
+
+  .phone-input {
+    flex-direction: column; /* Select dan input ditumpuk di mobile */
+  }
+  .phone-input select,
+  .phone-input input[type="tel"] {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* === Keyframes === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
